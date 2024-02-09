@@ -3,7 +3,7 @@ from flask import Flask, render_template
 from functions.database import Database
 
 app = Flask(__name__)
-
+ 
 
 
 
