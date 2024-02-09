@@ -3,6 +3,11 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <h1>Welcome to my website!</h1>
-  <p>This is the homepage.</p>
+<h1>Blog</h1>
+<a href="{{ url_for('newPost') }}"><button>Add New Post</button></a>
+<ul>
+    {% for post in posts %}
+    <li><a href="{{ url_for('getPost', post_id=post['id']) }}">{{ post['title'] }}</a></li>
+    {% endfor %}
+</ul>
 {% endblock %}

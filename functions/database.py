@@ -9,5 +9,5 @@ class Database:
     def __del__(self) -> None:
         self.database.close()
 
-    def createTestPost() -> None:
+    def createTestPost(self) -> None:
         self.database.execute('INSERT INTO posts (title, content) VALUES ("Random Title", "Lorem ipsum dolor sit amet consectetur adipiscing elit")')
